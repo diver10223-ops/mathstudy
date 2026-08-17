@@ -1,0 +1,2 @@
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const group=button.parentElement;group.querySelectorAll('button').forEach(b=>b.classList.remove('active'));button.classList.add('active');const value=button.dataset.filter;document.querySelectorAll('.question').forEach(card=>card.classList.toggle('hidden',value!=='all'&&!card.dataset.tags.includes(value)))}));
+document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());

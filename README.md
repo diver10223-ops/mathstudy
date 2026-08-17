@@ -1,7 +1,26 @@
-echo "# mathstudy" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/diver10223-ops/mathstudy.git
-git push -u origin main
+# MathStudy 高三数学学习站
+
+面向新高考学生的导数与立体几何专题学习网站。内容以 Markdown 保存，网站采用静态 HTML、CSS 和 JavaScript，可直接打开，也适合部署到 GitHub Pages。
+
+## 当前内容
+
+- 导数：利用导数研究函数的单调性（首个完整示范章节）
+- 立体几何：利用空间向量求二面角（首个完整示范章节）
+- 题库：按专题、地区、年份和难度筛选的原型页面
+- 规划：开发计划、网站脑图、题库范围与质量标准
+
+## 本地预览
+
+```bash
+python3 -m http.server 8000 --directory site
+```
+
+打开 <http://localhost:8000>。
+
+## 内容范围
+
+- 正式高考：2022—2026 年，北京、上海、江苏、浙江、广东、四川、湖北、湖南。
+- 模拟考试：2024—2026 年；北京海淀与西城，上海市级，南京与南通，杭州与宁波，广州与深圳，成都与绵阳，武汉与黄冈，长沙与衡阳，以及对应省级统考。
+- 所有真题和模拟题须完成来源核验；项目解析独立编写，不复制商业教辅解析。
+
+完整计划见 [`docs/development-plan.md`](docs/development-plan.md)。
