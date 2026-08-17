@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>切线问题｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" />
+  <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a class="active" href="index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout">
+  <aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#model">切线模型</a><a href="#types">两类问题</a><a href="#example">过点切线</a><a href="#mistakes">易错点</a></aside>
+  <article class="article">
+    <span class="eyebrow">导数 · 第 3 课</span><h1>切线问题</h1><p class="intro">切线题的核心只有两个条件：切点在曲线上，切线斜率等于切点处的导数值。</p>
+    <h2 id="model">切线方程模型</h2>
+    <div class="callout">曲线 \(y=f(x)\) 在切点 \((x_0,f(x_0))\) 处的切线为 \[y-f(x_0)=f'(x_0)(x-x_0).\]</div>
+    <h2 id="types">先判断题型</h2>
+    <h3>已知切点</h3><p>直接计算 \(f(x_0)\) 和 \(f'(x_0)\)，代入点斜式。</p>
+    <h3>切线经过给定点</h3><p>给定点不一定是切点。应另设切点横坐标为 \(t\)，写出切线，再把给定点代入求 \(t\)。</p>
+    <div class="callout warn"><strong>高频错误：</strong>看到“过点 \((a,b)\) 的切线”就把 \(a\) 当作切点横坐标。只有题目明确说“在点”或确认该点为切点时才能这样做。</div>
+    <h2 id="example"><span class="level">L3 提升</span> 过点切线</h2>
+    <p>求曲线 \(y=x^2\) 过点 \((0,-1)\) 的切线方程。</p>
+    <details open><summary>查看建模与解析</summary><div>设切点为 \((t,t^2)\)，斜率为 \(2t\)，切线为 \(y-t^2=2t(x-t)\)。代入 \((0,-1)\) 得 \(-1-t^2=-2t^2\)，所以 \(t=\pm1\)。两条切线分别为 \(y=2x-1\) 和 \(y=-2x-1\)。</div></details>
+    <h2 id="mistakes">结果检查</h2><ul><li>切点是否代回原曲线；</li><li>切线斜率是否等于该点导数；</li><li>题目给定点是否在求出的直线上；</li><li>关于切点的方程是否可能有多个实根。</li></ul>
+    <div class="actions"><a class="btn" href="extrema.html">← 上一课</a><a class="btn primary" href="../question-bank/index.html">去题库训练 →</a></div>
+  </article>
+</main><footer class="footer"><div class="container">MathStudy · 过一点的切线，切点可能不止一个</div></footer>
+</body>
+</html>

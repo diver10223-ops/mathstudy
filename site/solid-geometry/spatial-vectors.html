@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>空间向量基础｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a class="active" href="index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout">
+  <aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#coordinates">坐标表示</a><a href="#product">数量积</a><a href="#normal">法向量</a><a href="#example">典型例题</a></aside>
+  <article class="article">
+    <span class="eyebrow">立体几何 · 向量基础</span><h1>空间向量基础</h1><p class="intro">建立坐标系后，平行、垂直、夹角和距离都可以转化为向量坐标的运算。</p>
+    <h2 id="coordinates">坐标与基本运算</h2><p>若 \(A(x_1,y_1,z_1)\)、\(B(x_2,y_2,z_2)\)，则</p><div class="formula-block">\[\overrightarrow{AB}=(x_2-x_1,\ y_2-y_1,\ z_2-z_1).\]</div><p>向量 \(\boldsymbol a=(x,y,z)\) 的模为 \(|\boldsymbol a|=\sqrt{x^2+y^2+z^2}\)。</p>
+    <h2 id="product">数量积与夹角</h2><div class="formula-block">\[\boldsymbol a\cdot\boldsymbol b=x_1x_2+y_1y_2+z_1z_2=|\boldsymbol a||\boldsymbol b|\cos\theta.\]</div><ul><li>\(\boldsymbol a\perp\boldsymbol b\iff\boldsymbol a\cdot\boldsymbol b=0\)；</li><li>\(\boldsymbol a\parallel\boldsymbol b\iff\boldsymbol a=\lambda\boldsymbol b\)；</li><li>计算夹角前先确认题目要求的角度范围。</li></ul>
+    <h2 id="normal">平面的法向量</h2><p>若平面内有两个不共线向量 \(\boldsymbol u,\boldsymbol v\)，设法向量 \(\boldsymbol n=(x,y,z)\)，联立</p><div class="formula-block">\[\boldsymbol n\cdot\boldsymbol u=0,\qquad \boldsymbol n\cdot\boldsymbol v=0.\]</div><p>方程通常有无数组解，任选一个非零解即可；法向量乘非零常数仍是法向量。</p>
+    <h2 id="example"><span class="level">L2 巩固</span> 典型例题</h2><p>已知 \(\boldsymbol u=(1,1,0)\)、\(\boldsymbol v=(0,1,1)\)，求同时垂直于它们的一个单位向量。</p><details open><summary>查看解析</summary><div>设 \(\boldsymbol n=(x,y,z)\)，由 \(x+y=0\)、\(y+z=0\)，可取 \(\boldsymbol n=(1,-1,1)\)。其模为 \(\sqrt3\)，所以单位向量可取 \(\left(\frac{\sqrt3}{3},-\frac{\sqrt3}{3},\frac{\sqrt3}{3}\right)\) 或其相反向量。</div></details>
+    <div class="actions"><a class="btn" href="parallel-perpendicular.html">← 平行与垂直</a><a class="btn primary" href="dihedral-angle.html">下一课：二面角 →</a></div>
+  </article>
+</main><footer class="footer"><div class="container">MathStudy · 建系的目标是让更多点坐标简单</div></footer>
+</body>
+</html>

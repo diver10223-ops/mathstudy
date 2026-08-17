@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>空间体积与等体积法｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body><header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a class="active" href="index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#formula">体积公式</a><a href="#height">寻找高</a><a href="#exchange">等体积法</a><a href="#example">典型例题</a></aside><article class="article">
+<span class="eyebrow">立体几何 · 空间度量</span><h1>空间体积与等体积法</h1><p class="intro">体积题的关键是选一个容易计算面积的底面，并找到对应的高；同一个四面体更换顶点和底面后，体积保持不变。</p>
+<h2 id="formula">柱体、锥体与台体</h2><div class="formula-block">\[V_{\text{柱}}=Sh,\qquad V_{\text{锥}}=\frac13Sh,\qquad V_{\text{台}}=\frac h3(S_1+\sqrt{S_1S_2}+S_2).\]</div><p>底面积 \(S\) 与高 \(h\) 必须对应；斜棱通常不是高。</p>
+<h2 id="height">怎样寻找高</h2><ul><li>利用已知线面垂直直接确定高；</li><li>在直角三角形中用勾股定理求高；</li><li>建系后用点面距离公式求高；</li><li>更换底面，避开难求的原高。</li></ul>
+<h2 id="exchange">等体积法求距离</h2><p>四面体 \(P-ABC\) 可以写成不同形式：</p><div class="formula-block">\[V_{P-ABC}=\frac13S_{ABC}\,d(P,ABC)=\frac13S_{PAB}\,d(C,PAB).\]</div><p>先用容易的底和高算出体积，再反求另一个点到平面的距离。</p>
+<h2 id="example"><span class="level">L2 巩固</span> 典型例题</h2><p>三棱锥 \(P-ABC\) 中，\(PA\perp\) 平面 \(ABC\)，\(PA=3\)，三角形 \(ABC\) 面积为 4，求三棱锥体积。</p><details open><summary>查看解析</summary><div>因为 \(PA\) 是点 \(P\) 到底面 \(ABC\) 的高，所以 \[V=\frac13S_{ABC}\cdot PA=\frac13\times4\times3=4.\]</div></details>
+<div class="actions"><a class="btn" href="line-plane-angle-distance.html">← 角与距离</a><a class="btn primary" href="../assessment/index.html">参加阶段测验 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 底和高必须成对出现</div></footer></body></html>

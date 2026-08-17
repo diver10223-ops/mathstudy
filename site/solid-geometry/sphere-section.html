@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>几何体外接球与截面｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body><header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a class="active" href="index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#sphere">外接球</a><a href="#models">常见模型</a><a href="#section">球的截面</a><a href="#example">典型例题</a></aside><article class="article">
+<span class="eyebrow">立体几何 · 选择填空专题</span><h1>几何体外接球与截面</h1><p class="intro">外接球问题的核心是寻找一个到所有顶点距离相等的球心；截面问题则把空间距离转化为直角三角形。</p>
+<h2 id="sphere">球的基本公式</h2><div class="formula-block">\[S_{\text{球}}=4\pi R^2,\qquad V_{\text{球}}=\frac43\pi R^3.\]</div><p>几何体的外接球球心到所有顶点距离相等，半径就是这段公共距离。</p>
+<h2 id="models">三个常见外接球模型</h2><ul><li><strong>长方体：</strong>球心是体对角线中点，\(2R=\sqrt{a^2+b^2+c^2}\)；</li><li><strong>正方体：</strong>边长为 \(a\) 时，\(R=\frac{\sqrt3}{2}a\)；</li><li><strong>直角四面体：</strong>若三条两两垂直的棱交于一点，可补成长方体，再用体对角线求半径。</li></ul>
+<h2 id="section">球的平面截面</h2><p>半径为 \(R\) 的球被平面所截，球心到截面的距离为 \(d\)，截面圆半径为 \(r\)，则</p><div class="formula-block">\[r^2+d^2=R^2.\]</div><p>这是连接球心、截面圆心和截面圆上一点形成的直角三角形。</p><div class="callout warn"><strong>辨析：</strong>几何体“内切于球”表示顶点在球面上；球“内切于几何体”通常表示球与各个面相切，两类球心和半径模型不同。</div>
+<h2 id="example"><span class="level">L2 巩固</span> 典型例题</h2><p>长方体棱长分别为 2、3、6，求其外接球半径。</p><details open><summary>查看解析</summary><div>长方体体对角线长为 \(\sqrt{2^2+3^2+6^2}=7\)，球心为体对角线中点，所以外接球半径为 \(R=\frac72\)。</div></details>
+<div class="actions"><a class="btn" href="volume.html">← 空间体积</a><a class="btn primary" href="../question-bank/index.html">去题库训练 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 外接球先找等距点，截面再找直角三角形</div></footer></body></html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>分层题库｜MathStudy</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script>window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };</script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script defer src="../assets/js/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a>
+        <div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a class="active" href="index.html">题库</a></div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="hero compact-hero">
+        <span class="eyebrow">纯静态题库</span>
+        <h1>每一道题，都知道<br /><span class="gradient">为什么值得做</span></h1>
+        <p class="lead">题目直接写入 HTML，无需加载 JSON 或后端接口；无论直接打开文件还是通过 GitHub Pages 访问，都可以筛选和查看解析。</p>
+      </section>
+      <section class="section bank-section" aria-labelledby="bank-heading">
+        <div class="bank-panel">
+          <div class="section-head"><div><span class="eyebrow">分层训练</span><h2 id="bank-heading">选择训练范围</h2></div><p id="question-count" aria-live="polite">找到 19 道题</p></div>
+          <div class="filter-grid" aria-label="题库筛选条件">
+            <label>专题<select class="question-filter" id="topic-filter"><option value="all">全部专题</option><option value="derivative">导数</option><option value="geometry">立体几何</option></select></label>
+            <label>难度<select class="question-filter" id="level-filter"><option value="all">全部难度</option><option value="L1">L1 基础</option><option value="L2">L2 巩固</option><option value="L3">L3 提升</option><option value="L4">L4 综合</option></select></label>
+            <label>年份<select class="question-filter" id="year-filter"><option value="all">全部年份</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option></select></label>
+            <label>关键词<input class="question-filter" id="keyword-filter" type="search" placeholder="如：切线、体积、零点" /></label>
+          </div>
+          <div id="question-list">
+            <article class="question" data-topic="derivative" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">原创样题</span></div>
+              <h3>判断三次函数的单调区间</h3><p>求函数 \(f(x)=x^3-3x\) 的单调区间。</p>
+              <details><summary>查看提示</summary><div>先求 \(f'(x)\)，再用两个导数零点划分实数轴。</div></details>
+              <details><summary>查看答案与解析</summary><div>由 \(f'(x)=3(x-1)(x+1)\)，得递增区间为 \((−\infty,-1)\)、\((1,+\infty)\)，递减区间为 \((-1,1)\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">原创样题</span></div>
+              <h3>由平面内向量求法向量</h3><p>已知平面内两个向量为 \(\boldsymbol a=(1,0,1)\)、\(\boldsymbol b=(0,1,1)\)，写出该平面的一个法向量。</p>
+              <details><summary>查看提示</summary><div>设 \(\boldsymbol n=(x,y,z)\)，分别与两个已知向量作点积。</div></details>
+              <details><summary>查看答案与解析</summary><div>由 \(x+z=0\)、\(y+z=0\)，取 \(z=-1\)，可得 \(\boldsymbol n=(1,1,-1)\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">原创样题</span></div>
+              <h3>含参数函数的单调性</h3><p>若 \(f(x)=x^3-3ax\) 在实数轴上单调递增，求 \(a\) 的取值范围。</p>
+              <details><summary>查看提示</summary><div>将问题转化为 \(f'(x)\geq0\) 在实数轴上恒成立。</div></details>
+              <details><summary>查看答案与解析</summary><div>由 \(f'(x)=3x^2-3a\geq0\) 恒成立，并利用 \(x^2\) 的最小值为 0，得到 \(a\leq0\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">切线</span></div>
+              <h3>已知切点求切线</h3><p>求曲线 \(y=\ln x\) 在点 \((1,0)\) 处的切线方程。</p>
+              <details><summary>查看提示</summary><div>切线斜率是 \(f'(1)\)。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(f'(x)=\frac1x\)，故 \(f'(1)=1\)。由点斜式得 \(y=x-1\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">极值</span></div>
+              <h3>由极值反求参数</h3><p>已知 \(f(x)=x^3-3ax\) 在 \(x=1\) 处取得极小值，求 \(a\)。</p>
+              <details><summary>查看提示</summary><div>先用必要条件 \(f'(1)=0\)，再检查导数变号。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(f'(x)=3x^2-3a\)，由 \(f'(1)=0\) 得 \(a=1\)。此时导数在 1 左侧为负、右侧为正，所以确实取得极小值。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">线面角</span></div>
+              <h3>方向向量与法向量</h3><p>直线方向向量为 \((1,1,0)\)，平面法向量为 \((0,1,1)\)，求线面角的正弦值。</p>
+              <details><summary>查看提示</summary><div>线面角正弦等于方向向量与法向量夹角余弦的绝对值。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(\sin\theta=\frac{|1|}{\sqrt2\sqrt2}=\frac12\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">点面距离</span></div>
+              <h3>利用投影求距离</h3><p>平面经过原点且法向量为 \((2,-1,2)\)，求点 \((1,2,2)\) 到该平面的距离。</p>
+              <details><summary>查看提示</summary><div>把原点到已知点的向量投影到法向量方向。</div></details>
+              <details><summary>查看答案与解析</summary><div>距离 \(d=\frac{|2-2+4|}{\sqrt{4+1+4}}=\frac43\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">零点</span></div>
+              <h3>证明零点唯一</h3><p>证明函数 \(f(x)=x+\ln x\) 在 \((0,1)\) 内有且只有一个零点。</p>
+              <details><summary>查看提示</summary><div>分别证明存在性和唯一性；可以考察 \(f'(x)\)。</div></details>
+              <details><summary>查看答案与解析</summary><div>函数在 \((0,+\infty)\) 上连续且严格递增，因为 \(f'(x)=1+\frac1x&gt;0\)。又 \(f(1)=1&gt;0\)，且当 \(x\to0^+\) 时 \(f(x)\to-\infty\)，所以在 \((0,1)\) 内存在零点；严格递增保证零点唯一。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">参数</span></div>
+              <h3>恒成立中的参数范围</h3><p>若 \(x^2-2x+a\ge0\) 对任意实数 \(x\) 恒成立，求 \(a\) 的范围。</p>
+              <details><summary>查看提示</summary><div>配方或求函数的最小值。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(x^2-2x+a=(x-1)^2+a-1\)，最小值为 \(a-1\)，所以 \(a\ge1\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">异面直线</span></div>
+              <h3>方向向量求异面直线角</h3><p>两条异面直线的方向向量分别为 \((1,1,0)\) 与 \((1,0,1)\)，求它们所成角的余弦值。</p>
+              <details><summary>查看提示</summary><div>方向向量夹角公式需要对点积取绝对值。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(\cos\theta=\frac{|1|}{\sqrt2\sqrt2}=\frac12\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">证明</span></div>
+              <h3>由线面垂直推出面面垂直</h3><p>已知直线 \(l\subset\alpha\)，且 \(l\perp\beta\)，判断平面 \(\alpha\) 与 \(\beta\) 的位置关系。</p>
+              <details><summary>查看提示</summary><div>使用面面垂直的判定定理。</div></details>
+              <details><summary>查看答案与解析</summary><div>因为平面 \(\alpha\) 内含有一条垂直于平面 \(\beta\) 的直线 \(l\)，所以 \(\alpha\perp\beta\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">不等式</span></div>
+              <h3>证明指数函数不等式</h3><p>证明对任意实数 \(x\)，都有 \(e^x\ge x+1\)。</p>
+              <details><summary>查看提示</summary><div>构造 \(F(x)=e^x-x-1\)，寻找最小值。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(F'(x)=e^x-1\)，函数在 \((−\infty,0)\) 上递减，在 \((0,+\infty)\) 上递增，所以 \(F(x)\ge F(0)=0\)。等号仅在 \(x=0\) 时成立。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L4" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L4</span><span class="tag">2026</span><span class="tag">综合</span></div>
+              <h3>对数函数恒成立</h3><p>若 \(\ln x-ax\le-1\) 对任意 \(x&gt;0\) 恒成立，求 \(a\) 的范围。</p>
+              <details><summary>查看提示</summary><div>先判断 \(a\) 的符号，再求函数最大值。</div></details>
+              <details><summary>查看答案与解析</summary><div>当 \(a\le0\) 时不成立。对 \(a&gt;0\)，函数最大值为 \(-\ln a-1\)，令其不大于 \(-1\)，得到 \(a\ge1\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">体积</span></div>
+              <h3>三棱锥体积</h3><p>三棱锥底面积为 9，高为 4，求其体积。</p>
+              <details><summary>查看提示</summary><div>锥体体积为同底同高柱体的三分之一。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(V=\frac13Sh=\frac13\times9\times4=12\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">等体积</span></div>
+              <h3>更换底面求高</h3><p>四面体以面积为 6 的面作底时高为 2；改以面积为 4 的面作底，求新高。</p>
+              <details><summary>查看提示</summary><div>两种表示对应同一个四面体体积。</div></details>
+              <details><summary>查看答案与解析</summary><div>体积为 4。设新高为 \(h\)，则 \(4=\frac13\times4h\)，所以 \(h=3\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">实际优化</span></div>
+              <h3>无盖纸盒体积</h3><p>边长为 6 的正方形纸片四角各剪去边长为 \(x\) 的小正方形，求折成无盖纸盒的体积函数及 \(x\) 的范围。</p>
+              <details><summary>查看提示</summary><div>纸盒底面边长为 \(6-2x\)，高为 \(x\)。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(V(x)=x(6-2x)^2\)，实际范围为 \(0&lt;x&lt;3\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">实际优化</span></div>
+              <h3>矩形面积最大值</h3><p>周长为 20 的矩形中，边长分别为多少时面积最大？</p>
+              <details><summary>查看提示</summary><div>设一边为 \(x\)，另一边为 \(10-x\)。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(S(x)=x(10-x)\)，\(0&lt;x&lt;10\)。由 \(S'(x)=10-2x\)，得 \(x=5\) 时面积最大，因此矩形为边长 5 的正方形。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">外接球</span></div>
+              <h3>正方体的外接球</h3><p>边长为 2 的正方体外接球半径是多少？</p>
+              <details><summary>查看提示</summary><div>外接球直径等于正方体体对角线。</div></details>
+              <details><summary>查看答案与解析</summary><div>体对角线为 \(2\sqrt3\)，所以外接球半径为 \(\sqrt3\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">球的截面</span></div>
+              <h3>球的截面圆</h3><p>半径为 5 的球被一个平面所截，球心到截面的距离为 3，求截面圆面积。</p>
+              <details><summary>查看提示</summary><div>球半径、截面圆半径和球心到截面距离构成直角三角形。</div></details>
+              <details><summary>查看答案与解析</summary><div>截面圆半径满足 \(r^2+3^2=5^2\)，所以 \(r=4\)，截面圆面积为 \(16\pi\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+          </div>
+          <div class="empty-state" id="empty-result" hidden>当前筛选条件下暂无题目，请调整筛选条件。</div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="container">正式来源题录入前，必须完成出处与答案核验。</div></footer>
+  </body>
+</html>

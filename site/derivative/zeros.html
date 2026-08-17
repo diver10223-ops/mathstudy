@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>函数零点问题｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a class="active" href="index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#existence">零点存在</a><a href="#count">零点个数</a><a href="#hidden">隐零点</a><a href="#example">典型例题</a></aside><article class="article">
+<span class="eyebrow">导数 · 第 4 课</span><h1>函数零点问题</h1><p class="intro">零点题通常不要求解出精确根，而是借助连续性、单调性和极值判断根是否存在、存在几个以及位于哪里。</p>
+<h2 id="existence">零点存在性定理</h2><div class="callout">若函数 \(f(x)\) 在 \([a,b]\) 上连续，且 \(f(a)f(b)&lt;0\)，则在 \((a,b)\) 内至少存在一个零点。</div><p>“连续”和“异号”缺一不可。该定理只能保证至少一个零点；若要证明唯一，还需要单调性等附加条件。</p>
+<h2 id="count">判断零点个数</h2><ol><li>确定定义域；</li><li>求导并划分单调区间；</li><li>计算极值、端点值或单侧极限；</li><li>结合图像走势逐区间统计与 \(x\) 轴的交点。</li></ol><div class="callout warn"><strong>表达要求：</strong>证明“恰有一个零点”要同时写出“存在性”和“唯一性”。只写函数单调，不能自动说明零点存在。</div>
+<h2 id="hidden">隐零点代换</h2><p>当零点 \(x_0\) 无法显式求出时，保留等式 \(f(x_0)=0\)，用它替换目标式中的复杂部分。例如由 \(x_0+\ln x_0=0\) 可得 \(\ln x_0=-x_0\)。</p>
+<h2 id="example"><span class="level">L3 提升</span> 典型例题</h2><p>证明函数 \(f(x)=e^x-x-1\) 在 \((0,+\infty)\) 内没有零点。</p><details open><summary>查看解析</summary><div>\(f(0)=0\)，且当 \(x&gt;0\) 时，\(f'(x)=e^x-1&gt;0\)，所以 \(f(x)&gt;f(0)=0\)。因此开区间 \((0,+\infty)\) 内没有零点。</div></details>
+<div class="actions"><a class="btn" href="tangent.html">← 切线问题</a><a class="btn primary" href="parameters.html">下一课：参数讨论 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 存在靠异号，唯一靠单调</div></footer>
+</body></html>
