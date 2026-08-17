@@ -24,3 +24,9 @@
 .roadmap-list h3 { margin: 8px 0; }
 .roadmap-list p { margin: 0; color: var(--muted); font-size: 14px; }
 @media (max-width: 850px) { .mind-columns, .roadmap-list { grid-template-columns: 1fr; } .mindmap { padding: 20px; } }
+
+/* Stage assessment */
+.assessment-paper { max-width: 860px; margin: 0 auto; }
+.exam-question { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.exam-question:last-of-type { border-bottom: 0; }
+.exam-question p { font-size: 16px; }

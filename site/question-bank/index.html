@@ -24,7 +24,7 @@
       </section>
       <section class="section bank-section" aria-labelledby="bank-heading">
         <div class="bank-panel">
-          <div class="section-head"><div><span class="eyebrow">分层训练</span><h2 id="bank-heading">选择训练范围</h2></div><p id="question-count" aria-live="polite">找到 11 道题</p></div>
+          <div class="section-head"><div><span class="eyebrow">分层训练</span><h2 id="bank-heading">选择训练范围</h2></div><p id="question-count" aria-live="polite">找到 15 道题</p></div>
           <div class="filter-grid" aria-label="题库筛选条件">
             <label>专题<select class="question-filter" id="topic-filter"><option value="all">全部专题</option><option value="derivative">导数</option><option value="geometry">立体几何</option></select></label>
             <label>难度<select class="question-filter" id="level-filter"><option value="all">全部难度</option><option value="L1">L1 基础</option><option value="L2">L2 巩固</option><option value="L3">L3 提升</option><option value="L4">L4 综合</option></select></label>
@@ -107,6 +107,30 @@
               <details><summary>查看提示</summary><div>使用面面垂直的判定定理。</div></details>
               <details><summary>查看答案与解析</summary><div>因为平面 \(\alpha\) 内含有一条垂直于平面 \(\beta\) 的直线 \(l\)，所以 \(\alpha\perp\beta\)。</div></details>
               <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">不等式</span></div>
+              <h3>证明指数函数不等式</h3><p>证明对任意实数 \(x\)，都有 \(e^x\ge x+1\)。</p>
+              <details><summary>查看提示</summary><div>构造 \(F(x)=e^x-x-1\)，寻找最小值。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(F'(x)=e^x-1\)，函数在 \((−\infty,0)\) 上递减，在 \((0,+\infty)\) 上递增，所以 \(F(x)\ge F(0)=0\)。等号仅在 \(x=0\) 时成立。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L4" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L4</span><span class="tag">2026</span><span class="tag">综合</span></div>
+              <h3>对数函数恒成立</h3><p>若 \(\ln x-ax\le-1\) 对任意 \(x&gt;0\) 恒成立，求 \(a\) 的范围。</p>
+              <details><summary>查看提示</summary><div>先判断 \(a\) 的符号，再求函数最大值。</div></details>
+              <details><summary>查看答案与解析</summary><div>当 \(a\le0\) 时不成立。对 \(a&gt;0\)，函数最大值为 \(-\ln a-1\)，令其不大于 \(-1\)，得到 \(a\ge1\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">体积</span></div>
+              <h3>三棱锥体积</h3><p>三棱锥底面积为 9，高为 4，求其体积。</p>
+              <details><summary>查看提示</summary><div>锥体体积为同底同高柱体的三分之一。</div></details>
+              <details><summary>查看答案与解析</summary><div>\(V=\frac13Sh=\frac13\times9\times4=12\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">等体积</span></div>
+              <h3>更换底面求高</h3><p>四面体以面积为 6 的面作底时高为 2；改以面积为 4 的面作底，求新高。</p>
+              <details><summary>查看提示</summary><div>两种表示对应同一个四面体体积。</div></details>
+              <details><summary>查看答案与解析</summary><div>体积为 4。设新高为 \(h\)，则 \(4=\frac13\times4h\)，所以 \(h=3\)。</div></details><p class="source">原创样题 · 已完成基础校验</p>
             </article>
           </div>
           <div class="empty-state" id="empty-result" hidden>当前筛选条件下暂无题目，请调整筛选条件。</div>
