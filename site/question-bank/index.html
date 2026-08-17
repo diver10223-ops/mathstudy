@@ -13,30 +13,47 @@
     <header class="topbar">
       <nav class="nav" aria-label="主导航">
         <a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a>
-        <div class="links">
-          <a href="../index.html">首页</a><a href="../derivative/index.html">导数</a>
-          <a href="../solid-geometry/index.html">立体几何</a><a class="active" href="index.html">题库</a>
-        </div>
+        <div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a class="active" href="index.html">题库</a></div>
       </nav>
     </header>
     <main class="container">
       <section class="hero compact-hero">
-        <span class="eyebrow">题库原型</span>
+        <span class="eyebrow">纯静态题库</span>
         <h1>每一道题，都知道<br /><span class="gradient">为什么值得做</span></h1>
-        <p class="lead">当前使用原创样题验证筛选和解析体验。高考与模拟题将在来源核验和数学复核后逐批加入。</p>
+        <p class="lead">题目直接写入 HTML，无需加载 JSON 或后端接口；无论直接打开文件还是通过 GitHub Pages 访问，都可以筛选和查看解析。</p>
       </section>
       <section class="section bank-section" aria-labelledby="bank-heading">
         <div class="bank-panel">
-          <div class="section-head">
-            <div><span class="eyebrow">结构化题库</span><h2 id="bank-heading">选择训练范围</h2></div>
-            <p id="question-count" aria-live="polite">正在加载题库…</p>
-          </div>
+          <div class="section-head"><div><span class="eyebrow">分层训练</span><h2 id="bank-heading">选择训练范围</h2></div><p id="question-count" aria-live="polite">找到 3 道题</p></div>
           <div class="filter-grid" aria-label="题库筛选条件">
             <label>专题<select class="question-filter" id="topic-filter"><option value="all">全部专题</option><option value="derivative">导数</option><option value="geometry">立体几何</option></select></label>
             <label>难度<select class="question-filter" id="level-filter"><option value="all">全部难度</option><option value="L1">L1 基础</option><option value="L2">L2 巩固</option><option value="L3">L3 提升</option><option value="L4">L4 综合</option></select></label>
             <label>年份<select class="question-filter" id="year-filter"><option value="all">全部年份</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option></select></label>
           </div>
-          <div id="question-list" aria-busy="true"><div class="empty-state">正在读取题库数据…</div></div>
+          <div id="question-list">
+            <article class="question" data-topic="derivative" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">原创样题</span></div>
+              <h3>判断三次函数的单调区间</h3><p>求函数 \(f(x)=x^3-3x\) 的单调区间。</p>
+              <details><summary>查看提示</summary><div>先求 \(f'(x)\)，再用两个导数零点划分实数轴。</div></details>
+              <details><summary>查看答案与解析</summary><div>由 \(f'(x)=3(x-1)(x+1)\)，得递增区间为 \((−\infty,-1)\)、\((1,+\infty)\)，递减区间为 \((-1,1)\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="geometry" data-level="L2" data-year="2026">
+              <div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">2026</span><span class="tag">原创样题</span></div>
+              <h3>由平面内向量求法向量</h3><p>已知平面内两个向量为 \(\boldsymbol a=(1,0,1)\)、\(\boldsymbol b=(0,1,1)\)，写出该平面的一个法向量。</p>
+              <details><summary>查看提示</summary><div>设 \(\boldsymbol n=(x,y,z)\)，分别与两个已知向量作点积。</div></details>
+              <details><summary>查看答案与解析</summary><div>由 \(x+z=0\)、\(y+z=0\)，取 \(z=-1\)，可得 \(\boldsymbol n=(1,1,-1)\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+            <article class="question" data-topic="derivative" data-level="L3" data-year="2026">
+              <div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">2026</span><span class="tag">原创样题</span></div>
+              <h3>含参数函数的单调性</h3><p>若 \(f(x)=x^3-3ax\) 在实数轴上单调递增，求 \(a\) 的取值范围。</p>
+              <details><summary>查看提示</summary><div>将问题转化为 \(f'(x)\geq0\) 在实数轴上恒成立。</div></details>
+              <details><summary>查看答案与解析</summary><div>由 \(f'(x)=3x^2-3a\geq0\) 恒成立，并利用 \(x^2\) 的最小值为 0，得到 \(a\leq0\)。</div></details>
+              <p class="source">原创样题 · 已完成基础校验</p>
+            </article>
+          </div>
+          <div class="empty-state" id="empty-result" hidden>当前筛选条件下暂无题目，请调整筛选条件。</div>
         </div>
       </section>
     </main>

@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Dependency-free structural checks for the generated static site."""
 
-import json
-import re
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
@@ -20,6 +18,7 @@ class DocumentParser(HTMLParser):
         self.language = None
         self.title_depth = 0
         self.title = ""
+        self.questions = []
 
     def handle_starttag(self, tag, attrs):
         values = dict(attrs)
@@ -31,6 +30,8 @@ class DocumentParser(HTMLParser):
             self.ids.add(values["id"])
         if tag == "title":
             self.title_depth += 1
+        if tag == "article" and "question" in values.get("class", "").split():
+            self.questions.append(values)
 
     def handle_endtag(self, tag):
         if tag == "title":
@@ -68,32 +69,25 @@ class SiteTests(unittest.TestCase):
                     if fragment and target.suffix == ".html":
                         self.assertIn(fragment, parse_document(target).ids)
 
-    def test_question_data_schema_and_unique_ids(self):
-        questions = json.loads((SITE / "data/questions.json").read_text(encoding="utf-8"))
-        required = {
-            "id", "title", "topic", "knowledgePoints", "difficulty", "year",
-            "region", "type", "statement", "hint", "solution", "source",
-        }
-        ids = []
-        for question in questions:
-            self.assertEqual(required, set(question))
-            self.assertIn(question["topic"], {"derivative", "geometry"})
-            self.assertIn(question["difficulty"], {"L1", "L2", "L3", "L4"})
-            self.assertGreaterEqual(question["year"], 2022)
-            self.assertLessEqual(question["year"], 2026)
-            self.assertEqual(
-                {"kind", "label", "status"}, set(question["source"]),
-            )
-            ids.append(question["id"])
-        self.assertEqual(len(ids), len(set(ids)), "Question IDs must be unique")
+    def test_static_question_metadata(self):
+        document = parse_document(SITE / "question-bank/index.html")
+        self.assertGreater(len(document.questions), 0)
+        for question in document.questions:
+            with self.subTest(question=question):
+                self.assertIn(question.get("data-topic"), {"derivative", "geometry"})
+                self.assertIn(question.get("data-level"), {"L1", "L2", "L3", "L4"})
+                self.assertGreaterEqual(int(question["data-year"]), 2022)
+                self.assertLessEqual(int(question["data-year"]), 2026)
 
-    def test_math_delimiters_are_balanced_in_markdown(self):
-        for path in (ROOT / "content").rglob("*.md"):
-            text = path.read_text(encoding="utf-8")
-            without_blocks = re.sub(r"\$\$.*?\$\$", "", text, flags=re.DOTALL)
-            with self.subTest(path=path.relative_to(ROOT)):
-                self.assertEqual(text.count("$$") % 2, 0)
-                self.assertEqual(without_blocks.count("$") % 2, 0)
+    def test_site_has_no_runtime_data_or_markdown_files(self):
+        forbidden = {".json", ".md"}
+        unexpected = [path for path in SITE.rglob("*") if path.suffix in forbidden]
+        self.assertEqual(unexpected, [])
+
+    def test_github_pages_workflow_publishes_site_directory(self):
+        workflow = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")
+        self.assertIn("uses: actions/deploy-pages@v4", workflow)
+        self.assertIn("path: site", workflow)
 
 
 if __name__ == "__main__":

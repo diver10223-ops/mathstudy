@@ -1,25 +1,32 @@
 # MathStudy 高三数学学习站
 
-面向新高考学生的导数与立体几何专题学习网站。内容以 Markdown 保存，网站采用静态 HTML、CSS 和 JavaScript，可直接打开，也适合部署到 GitHub Pages。
+面向新高考学生的导数与立体几何学习网站。项目是纯静态站点：课程、例题和题库都直接写在 HTML 中，配合原生 CSS、JavaScript 与 MathJax，不使用前端框架、数据库或构建工具。
 
-## 当前内容
+## 当前页面
 
-- 导数：利用导数研究函数的单调性（首个完整示范章节）
-- 导数：函数的极值与最值
-- 立体几何：利用空间向量求二面角（首个完整示范章节）
-- 立体几何：空间中的平行与垂直
-- 题库：按专题、地区、年份和难度筛选的原型页面
-- 规划：开发计划、网站脑图、题库范围与质量标准
+- 学习首页：`site/index.html`
+- 导数：单调性、函数的极值与最值
+- 立体几何：向量法求二面角、空间中的平行与垂直
+- 题库：内嵌 HTML 题目，按专题、难度和年份筛选
+- 开发计划：HTML 网站脑图与里程碑
 
-## 本地预览
+## 访问方式
+
+可以直接打开 `site/index.html`。为模拟 GitHub Pages 的访问方式，也可以启动本地静态服务器：
 
 ```bash
 python3 -m http.server 8000 --directory site
 ```
 
-打开 <http://localhost:8000>。
+然后打开 <http://localhost:8000>。
 
-## 检查
+## GitHub Pages
+
+仓库包含 GitHub Pages 工作流。推送到 `main` 或 `newstudy` 分支后，工作流会把 `site/` 作为纯静态网站发布，不会执行打包或编译。
+
+在仓库的 **Settings → Pages → Build and deployment** 中将 Source 设置为 **GitHub Actions**。
+
+## 自动检查
 
 ```bash
 python3 -m unittest discover -s tests -v
@@ -29,6 +36,4 @@ python3 -m unittest discover -s tests -v
 
 - 正式高考：2022—2026 年，北京、上海、江苏、浙江、广东、四川、湖北、湖南。
 - 模拟考试：2024—2026 年；北京海淀与西城，上海市级，南京与南通，杭州与宁波，广州与深圳，成都与绵阳，武汉与黄冈，长沙与衡阳，以及对应省级统考。
-- 所有真题和模拟题须完成来源核验；项目解析独立编写，不复制商业教辅解析。
-
-完整计划见 [`docs/development-plan.md`](docs/development-plan.md)。
+- 真题和模拟题必须完成来源核验；解析独立编写，不复制商业教辅解析。
