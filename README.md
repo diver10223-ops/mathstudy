@@ -1,7 +1,28 @@
-echo "# mathstudy" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/diver10223-ops/mathstudy.git
-git push -u origin main
+# 高三数学题库（2022–2026）
+
+本题库聚焦以下范围：
+
+- 地区：北京、上海、江苏、浙江、广东
+- 年份：2022、2023、2024、2025、2026
+- 考试类型：高考、一模、二模、三模、四模、模拟
+- 专题：导数、立体几何
+- 文件格式：Markdown + HTML
+
+## 目录说明
+
+- `question_bank/derivative/`：导数专题题库
+- `question_bank/solid_geometry/`：立体几何专题题库
+- `docs/schema.md`：题目结构与字段规范
+- `docs/collect_plan.md`：采集与录入流程
+
+## 使用方式
+
+1. 进入对应专题目录（导数/立体几何）
+2. 选择地区与年份
+3. 按考试类型查看 `*.md` 或 `*.html`
+
+## 版权与来源说明
+
+- 本仓库用于学习与研究整理。
+- 每道题需在“来源”字段中保留原始出处信息（年份、地区、考试名称、题号）。
+- 如涉及版权内容，请使用“题号索引+知识点摘要”方式并保留原始来源链接。
