@@ -1,1 +1,45 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>分层题库｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css"><script defer src="../assets/js/app.js"></script><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><header class="topbar"><nav class="nav"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a class="active" href="index.html">题库</a></div></nav></header><main class="container"><section class="hero" style="padding-bottom:10px"><span class="eyebrow">题库原型</span><h1>每一道题，都知道<br><span class="gradient">为什么值得做</span></h1><p class="lead">当前展示原创样题用于验证筛选和解析体验。高考与模拟题将在来源核验和数学复核后逐批加入。</p></section><section class="section" style="padding-top:20px"><div class="card" style="transform:none"><strong>按专题筛选</strong><div class="filters"><button class="active" data-filter="all">全部</button><button data-filter="derivative">导数</button><button data-filter="geometry">立体几何</button><button data-filter="L2">L2 巩固</button><button data-filter="L3">L3 提升</button></div><article class="question" data-tags="derivative L2"><div class="meta"><span class="tag blue">导数</span><span class="tag">L2</span><span class="tag">原创样题</span></div><h3>函数单调区间</h3><p>求 \(f(x)=x^3-3x\) 的单调区间。</p><details><summary>查看答案与解析</summary><div>由 \(f'(x)=3(x-1)(x+1)\)，得递增区间为 \((−\infty,-1)\)、\((1,+\infty)\)，递减区间为 \((-1,1)\)。</div></details><p class="source">来源状态：原创样题 · 已完成基础校验</p></article><article class="question" data-tags="geometry L2"><div class="meta"><span class="tag blue">立体几何</span><span class="tag">L2</span><span class="tag">原创样题</span></div><h3>法向量判断</h3><p>已知平面内两个向量为 \(\boldsymbol a=(1,0,1)\)、\(\boldsymbol b=(0,1,1)\)，写出该平面的一个法向量。</p><details><summary>查看答案与解析</summary><div>设 \(\boldsymbol n=(x,y,z)\)，由 \(x+z=0\)、\(y+z=0\)，取 \(z=-1\)，得到 \(\boldsymbol n=(1,1,-1)\)。</div></details><p class="source">来源状态：原创样题 · 已完成基础校验</p></article><article class="question" data-tags="derivative L3"><div class="meta"><span class="tag blue">导数</span><span class="tag">L3</span><span class="tag">原创样题</span></div><h3>含参数单调性</h3><p>若 \(f(x)=x^3-3ax\) 在实数轴上单调递增，求 \(a\) 的范围。</p><details><summary>查看答案与解析</summary><div>由 \(f'(x)=3x^2-3a\ge0\) 恒成立，得 \(a\le0\)。</div></details><p class="source">来源状态：原创样题 · 已完成基础校验</p></article></div></section></main><footer class="footer"><div class="container">正式来源题录入前，必须完成出处与答案核验。</div></footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>分层题库｜MathStudy</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script>window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };</script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script defer src="../assets/js/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a>
+        <div class="links">
+          <a href="../index.html">首页</a><a href="../derivative/index.html">导数</a>
+          <a href="../solid-geometry/index.html">立体几何</a><a class="active" href="index.html">题库</a>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="hero compact-hero">
+        <span class="eyebrow">题库原型</span>
+        <h1>每一道题，都知道<br /><span class="gradient">为什么值得做</span></h1>
+        <p class="lead">当前使用原创样题验证筛选和解析体验。高考与模拟题将在来源核验和数学复核后逐批加入。</p>
+      </section>
+      <section class="section bank-section" aria-labelledby="bank-heading">
+        <div class="bank-panel">
+          <div class="section-head">
+            <div><span class="eyebrow">结构化题库</span><h2 id="bank-heading">选择训练范围</h2></div>
+            <p id="question-count" aria-live="polite">正在加载题库…</p>
+          </div>
+          <div class="filter-grid" aria-label="题库筛选条件">
+            <label>专题<select class="question-filter" id="topic-filter"><option value="all">全部专题</option><option value="derivative">导数</option><option value="geometry">立体几何</option></select></label>
+            <label>难度<select class="question-filter" id="level-filter"><option value="all">全部难度</option><option value="L1">L1 基础</option><option value="L2">L2 巩固</option><option value="L3">L3 提升</option><option value="L4">L4 综合</option></select></label>
+            <label>年份<select class="question-filter" id="year-filter"><option value="all">全部年份</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option></select></label>
+          </div>
+          <div id="question-list" aria-busy="true"><div class="empty-state">正在读取题库数据…</div></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="container">正式来源题录入前，必须完成出处与答案核验。</div></footer>
+  </body>
+</html>
