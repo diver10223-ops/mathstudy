@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>函数的极值与最值｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" />
+    <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  </head>
+  <body>
+    <header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a class="active" href="index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+    <main class="container article-layout">
+      <aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#concept">概念辨析</a><a href="#method">求解流程</a><a href="#example">典型例题</a><a href="#practice">分层练习</a></aside>
+      <article class="article"><span class="eyebrow">导数 · 第 2 课</span><h1>函数的极值与最值</h1><p class="intro">极值关心局部的高低，最值关心整个范围。导数负责找到候选点，函数值比较负责给出最终答案。</p>
+        <h2 id="concept">概念辨析</h2><ul><li>极值是局部概念，最值是整体概念；</li><li>导数由正变负得到极大值，由负变正得到极小值；</li><li>仅有 \(f'(x_0)=0\) 不能断定 \(x_0\) 是极值点。</li></ul><div class="callout warn"><strong>易错：</strong>求闭区间最值时必须比较端点值，不能只检查导数零点。</div>
+        <h2 id="method">闭区间最值四步法</h2><ol><li>求导数零点；</li><li>保留区间内部候选点；</li><li>计算候选点和两个端点的函数值；</li><li>比较并回答最值。</li></ol>
+        <h2 id="example"><span class="level">L2 巩固</span> 典型例题</h2><p>求 \(f(x)=x^3-3x+1\) 在 \([-2,2]\) 上的最大值与最小值。</p><p>由 \(f'(x)=3(x-1)(x+1)\)，候选点为 \(-1,1\)。</p><div class="formula-block">\[f(-2)=-1,\quad f(-1)=3,\quad f(1)=-1,\quad f(2)=3\]</div><p>最大值为 3，最小值为 −1；同一个最值可以在多个点取得。</p>
+        <h2 id="practice"><span class="level">L3 提升</span> 分层练习</h2><p>若 \(f(x)=x^3-3x+m\) 在 \([-2,2]\) 上的最大值为 5，求 \(m\)。</p><details><summary>查看提示</summary><div>常数 \(m\) 使图像整体上下平移。</div></details><details><summary>查看解析</summary><div>\(x^3-3x\) 在该区间上的最大值为 2，所以 \(2+m=5\)，得到 \(m=3\)。</div></details><div class="actions"><a class="btn" href="monotonicity.html">← 上一课</a><a class="btn primary" href="../question-bank/index.html">去题库训练 →</a></div>
+      </article>
+    </main><footer class="footer"><div class="container">MathStudy · 候选点找全，再比较函数值</div></footer>
+  </body>
+</html>

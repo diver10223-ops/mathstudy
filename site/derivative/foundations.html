@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>导数基础与几何意义｜MathStudy</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a class="active" href="index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout">
+  <aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#meaning">变化率</a><a href="#definition">导数定义</a><a href="#rules">求导公式</a><a href="#example">典型例题</a><a href="#check">自我检查</a></aside>
+  <article class="article">
+    <span class="eyebrow">导数 · 基础课</span><h1>导数基础与几何意义</h1>
+    <p class="intro">导数同时描述两件事：函数在某一点变化得有多快，以及函数图像在该点切线有多陡。</p>
+    <h2 id="meaning">从平均变化率到瞬时变化率</h2>
+    <p>函数从 \(x_0\) 变化到 \(x_0+\Delta x\) 时，平均变化率是</p>
+    <div class="formula-block">\[\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}.\]</div>
+    <p>让 \(\Delta x\) 趋近于 0，割线逐渐趋近切线，平均变化率的极限就是瞬时变化率。</p>
+    <h2 id="definition">导数定义</h2>
+    <div class="callout">若极限存在，则 \[f'(x_0)=\lim_{\Delta x\to0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}.\] 几何上，\(f'(x_0)\) 是曲线在点 \((x_0,f(x_0))\) 处切线的斜率。</div>
+    <div class="callout warn"><strong>辨析：</strong>“函数在一点连续”不一定“在该点可导”；但“在一点可导”一定“在该点连续”。例如 \(f(x)=|x|\) 在 0 处连续却不可导。</div>
+    <h2 id="rules">常用求导公式</h2>
+    <div class="formula-block">\[(x^n)'=nx^{n-1},\quad (e^x)'=e^x,\quad (\ln x)'=\frac1x,\quad (\sin x)'=\cos x,\quad (\cos x)'=-\sin x.\]</div>
+    <p>运算法则：\((u\pm v)'=u'\pm v'\)，\((uv)'=u'v+uv'\)，\(\left(\frac uv\right)'=\frac{u'v-uv'}{v^2}\)。复合函数要遵循“外层求导乘以内层导数”。</p>
+    <h2 id="example"><span class="level">L2 巩固</span> 典型例题</h2>
+    <p>求 \(f(x)=x^2\ln x\) 的导数，并写出定义域。</p>
+    <details open><summary>查看解析</summary><div>定义域为 \((0,+\infty)\)。使用乘积法则：\[f'(x)=2x\ln x+x^2\cdot\frac1x=x(2\ln x+1).\]</div></details>
+    <h2 id="check">自我检查</h2>
+    <p>若曲线 \(y=x^3-2x\) 在 \(x=1\) 处的切线斜率为 \(k\)，求 \(k\)。</p>
+    <details><summary>查看答案</summary><div>\(f'(x)=3x^2-2\)，所以 \(k=f'(1)=1\)。</div></details>
+    <div class="actions"><a class="btn" href="index.html">← 返回专题</a><a class="btn primary" href="monotonicity.html">下一课：单调性 →</a></div>
+  </article>
+</main>
+<footer class="footer"><div class="container">MathStudy · 先写定义域，再开始求导</div></footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>导数中的含参数讨论｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a class="active" href="index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#why">为何分类</a><a href="#workflow">讨论流程</a><a href="#separate">分离参数</a><a href="#example">典型例题</a></aside><article class="article">
+<span class="eyebrow">导数 · 第 5 课</span><h1>含参数讨论</h1><p class="intro">分类讨论不是“多写几种情况”，而是找出参数跨越哪些临界值时，导数零点的数量、顺序或位置会发生变化。</p>
+<h2 id="why">临界值从哪里来</h2><ul><li>导数方程出现或消失实根；</li><li>两个导数零点重合或交换顺序；</li><li>导数零点跨越定义域端点；</li><li>极值跨越题目给定的目标值。</li></ul>
+<h2 id="workflow">标准讨论流程</h2><ol><li>确定定义域，参数不能改变被忽略的限制；</li><li>求导并尽量因式分解；</li><li>列出可能改变符号表结构的临界参数；</li><li>在各参数区间内分别排列临界点；</li><li>写出单调性、极值或零点结论；</li><li>单独检查参数等于临界值的情形。</li></ol>
+<h2 id="separate">何时分离参数</h2><p>若不等式能改写成 \(a\ge g(x)\) 或 \(a\le g(x)\)，恒成立问题可以转化为求 \(g(x)\) 的最值。分离之前必须确认除数符号，不能在未知正负的式子两边直接相除。</p><div class="callout warn"><strong>检查：</strong>“恒成立”取最不利的 \(x\)；“存在成立”只需找到至少一个 \(x\)。两者对应的最值方向往往相反。</div>
+<h2 id="example"><span class="level">L3 提升</span> 典型例题</h2><p>若函数 \(f(x)=x^3-3x^2+ax\) 在 \(\mathbb R\) 上单调递增，求 \(a\) 的取值范围。</p><details open><summary>查看解析</summary><div>\(f'(x)=3x^2-6x+a=3(x-1)^2+a-3\)。要使函数在实数轴上单调递增，需要 \(f'(x)\ge0\) 恒成立。导数最小值为 \(a-3\)，故 \(a\ge3\)。当 \(a=3\) 时导数只在孤立点 1 为零，函数仍严格单调递增。</div></details>
+<div class="actions"><a class="btn" href="zeros.html">← 零点问题</a><a class="btn primary" href="../question-bank/index.html">去题库训练 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 先找临界值，再做分类表</div></footer>
+</body></html>
