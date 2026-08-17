@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>开发计划与网站脑图｜MathStudy</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a>
+        <div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a><a class="active" href="index.html">计划</a></div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="hero compact-hero"><span class="eyebrow">项目路线图</span><h1>从网站骨架到<br /><span class="gradient">完整学习系统</span></h1><p class="lead">网站采用纯静态 HTML、CSS 和 JavaScript，不使用框架、不需要构建步骤，可以直接发布到 GitHub Pages。</p></section>
+      <section class="section"><div class="section-head"><div><h2>网站脑图</h2><p>以下脑图直接使用 HTML 和 CSS 展示，不依赖 Mermaid 或外部脑图库。</p></div></div>
+        <div class="mindmap" role="tree" aria-label="MathStudy 网站结构">
+          <div class="mind-root">MathStudy</div>
+          <div class="mind-columns">
+            <section class="mind-branch"><h3>学习首页</h3><ul><li>推荐学习路径</li><li>专题进度</li><li>快速入口</li></ul></section>
+            <section class="mind-branch"><h3>导数专题</h3><ul><li>导数与几何意义</li><li>单调性</li><li>极值与最值</li><li>切线与不等式</li><li>零点与参数</li></ul></section>
+            <section class="mind-branch"><h3>立体几何</h3><ul><li>平行与垂直</li><li>空间向量</li><li>异面直线角</li><li>线面角与二面角</li><li>空间距离</li></ul></section>
+            <section class="mind-branch"><h3>真题题库</h3><ul><li>正式高考 2022—2026</li><li>指定模拟 2024—2026</li><li>专题、年份、地区筛选</li><li>提示与解析</li></ul></section>
+            <section class="mind-branch"><h3>学习工具</h3><ul><li>公式速查</li><li>解题模板</li><li>易错清单</li><li>阶段测验</li></ul></section>
+            <section class="mind-branch"><h3>质量管理</h3><ul><li>题源核验</li><li>答案复核</li><li>重复题检测</li><li>链接与公式检查</li></ul></section>
+          </div>
+        </div>
+      </section>
+      <section class="section"><div class="section-head"><div><h2>开发阶段</h2></div></div><div class="roadmap-list">
+        <article><span>M1 · 已完成</span><h3>静态网站框架</h3><p>响应式首页、专题导航、文章页面、MathJax 与打印样式。</p></article>
+        <article><span>M2 · 进行中（15 课）</span><h3>完整专题内容</h3><p>导数已形成 8 课主线，立体几何完成 7 课；下一批转向公式速查、解题模板和内容复核。</p></article>
+        <article><span>M3 · 原型完成</span><h3>纯 HTML 题库</h3><p>题目内嵌页面，通过 data 属性完成专题、难度和年份筛选。</p></article>
+        <article><span>M4 · 待执行</span><h3>真题与模拟题</h3><p>逐题核验来源与答案后，按已确定地区和年份录入。</p></article>
+        <article><span>M5 · 已完成首版</span><h3>学习工具</h3><p>阶段测验、公式速查、解题模板和浏览器本地学习进度均已上线。</p></article>
+        <article><span>M6 · 已配置</span><h3>GitHub Pages</h3><p>推送分支后由 GitHub Actions 自动发布 site 目录。</p></article>
+      </div></section>
+    </main>
+    <footer class="footer"><div class="container">MathStudy · 纯静态、可维护、可持续扩充</div></footer>
+  </body>
+</html>

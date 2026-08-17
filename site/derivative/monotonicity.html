@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>利用导数研究单调性｜MathStudy</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+</head>
+<body>
+<header class="topbar">
+<nav class="nav">
+<a class="brand" href="../index.html">
+<span class="brand-mark">∑</span>MathStudy</a>
+<div class="links">
+<a href="../index.html">首页</a>
+<a class="active" href="index.html">导数</a>
+<a href="../solid-geometry/index.html">立体几何</a>
+<a href="../question-bank/index.html">题库</a>
+</div>
+</nav>
+</header>
+<main class="container article-layout">
+<aside class="sidebar">
+<p class="sidebar-title">本节目录</p>
+<a class="active" href="#goal">学习目标</a>
+<a href="#core">核心结论</a>
+<a href="#method">标准流程</a>
+<a href="#example">典型例题</a>
+<a href="#practice">分层练习</a>
+</aside>
+<article class="article">
+<span class="eyebrow">导数 · 第 1 课</span>
+<h1>利用导数研究函数的单调性</h1>
+<p class="intro">导数给出函数在一个瞬间的变化方向。把每一点的方向连起来，就能读懂整个区间上的增减趋势。</p>
+<h2 id="goal">学习目标</h2>
+<ul>
+<li>理解导数符号与函数单调性的关系；</li>
+<li>掌握“定义域—求导—符号表—结论”的标准流程；</li>
+<li>识别含参数问题中的临界值。</li>
+</ul>
+<h2 id="core">核心结论</h2>
+<div class="callout">设函数 \(f(x)\) 在区间 \(I\) 上可导。若 \(f'(x)&gt;0\)，则 \(f(x)\) 在 \(I\) 上单调递增；若 \(f'(x)&lt;0\)，则函数单调递减。</div>
+<div class="callout warn">
+<strong>易错：</strong>只知道某一点 \(f'(x)=0\)，不能断定函数在该点取得极值。还要检查导数是否在该点两侧变号。</div>
+<h2 id="method">标准流程</h2>
+<ol>
+<li>
+<strong>定：</strong>写定义域；</li>
+<li>
+<strong>导：</strong>求导并尽量因式分解；</li>
+<li>
+<strong>界：</strong>找导数零点和无定义点；</li>
+<li>
+<strong>判：</strong>判断分界区间内导数符号；</li>
+<li>
+<strong>答：</strong>分别写出单调区间。</li>
+</ol>
+<h2 id="example">
+<span class="level">L2 巩固</span> 典型例题</h2>
+<p>求函数 \(f(x)=x^3-3x^2+2\) 的单调区间。</p>
+<div class="formula-block">\[f'(x)=3x^2-6x=3x(x-2)\]</div>
+<p>临界点为 \(0,2\)。当 \(x&lt;0\) 或 \(x&gt;2\) 时导数为正；当 \(0&lt;x&lt;2\) 时导数为负。因此递增区间为 \((−\infty,0)\)、\((2,+\infty)\)，递减区间为 \((0,2)\)。</p>
+<h2 id="practice">
+<span class="level">L3 提升</span> 分层练习</h2>
+<p>已知 \(f(x)=x^3-3ax\) 在 \(\mathbb R\) 上单调递增，求实数 \(a\) 的取值范围。</p>
+<details>
+<summary>查看提示</summary>
+<div>研究 \(f'(x)=3x^2-3a\) 在实数轴上的最小值。</div>
+</details>
+<details>
+<summary>查看完整解析</summary>
+<div>要使函数在实数轴上单调递增，需要 \(f'(x)=3(x^2-a)\ge 0\) 恒成立。因为 \(x^2\) 的最小值为 0，所以 \(-3a\ge0\)，即 \(a\le0\)。导数可能在孤立点等于零，不影响严格单调递增的结论。</div>
+</details>
+<div class="actions">
+<a class="btn" href="index.html">← 返回专题</a>
+<a class="btn primary" href="../question-bank/index.html">去题库训练 →</a>
+</div>
+</article>
+</main>
+<footer class="footer">
+<div class="container">MathStudy · 每一个结论都要说明依据</div>
+</footer>
+</body>
+</html>

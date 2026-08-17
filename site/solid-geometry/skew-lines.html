@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>异面直线所成角｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a class="active" href="index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#definition">定义</a><a href="#geometry">几何法</a><a href="#vector">向量法</a><a href="#example">典型例题</a></aside><article class="article">
+<span class="eyebrow">立体几何 · 空间角</span><h1>异面直线所成角</h1><p class="intro">异面直线不相交，先通过平移把方向集中到同一点，再求两条相交直线的锐角或直角。</p>
+<h2 id="definition">定义与范围</h2><p>经过空间任意一点，分别作两条异面直线的平行线，这两条相交直线所成的锐角或直角就是异面直线所成角，范围为 \((0,\frac\pi2]\)。</p>
+<h2 id="geometry">几何法：平移方向</h2><ol><li>利用中位线、平行四边形或平行棱作出平行线；</li><li>把所求角转化到一个三角形中；</li><li>通过勾股定理或余弦定理解三角形；</li><li>确认取锐角还是直角。</li></ol>
+<h2 id="vector">向量法：方向向量夹角</h2><p>若两条直线的方向向量分别为 \(\boldsymbol a,\boldsymbol b\)，所成角为 \(\theta\)，则</p><div class="formula-block">\[\cos\theta=\frac{|\boldsymbol a\cdot\boldsymbol b|}{|\boldsymbol a||\boldsymbol b|}.\]</div><p>绝对值保证结果对应锐角或直角，不受方向向量取向影响。</p>
+<h2 id="example"><span class="level">L2 巩固</span> 典型例题</h2><p>在单位正方体 \(ABCD-A_1B_1C_1D_1\) 中，求直线 \(AB_1\) 与 \(BC_1\) 所成角的余弦值。</p><details open><summary>查看解析</summary><div>建系后可取方向向量 \(\overrightarrow{AB_1}=(1,0,1)\)，\(\overrightarrow{BC_1}=(0,1,1)\)。因此 \[\cos\theta=\frac{|1|}{\sqrt2\sqrt2}=\frac12.\] 所成角为 \(60^\circ\)。</div></details>
+<div class="actions"><a class="btn" href="spatial-vectors.html">← 空间向量</a><a class="btn primary" href="line-plane-angle-distance.html">下一课：线面角 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 异面直线不相交，但方向可以平移</div></footer>
+</body></html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>导数综合训练方法｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body><header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a class="active" href="index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#read">读题</a><a href="#route">决策路线</a><a href="#example">综合例题</a><a href="#review">复盘</a></aside><article class="article">
+<span class="eyebrow">导数 · 综合课</span><h1>导数综合训练方法</h1><p class="intro">综合题的难点不是求导，而是判断每一问应该研究哪个函数、在哪个区间研究，以及参数怎样改变函数结构。</p>
+<h2 id="read">先把问题翻译成函数语言</h2><ul><li>“单调”翻译为导数符号；</li><li>“恒成立”翻译为最值控制；</li><li>“有两个根”翻译为图像交点个数；</li><li>“证明不等式”翻译为构造函数非负；</li><li>“切线经过点”翻译为未知切点方程。</li></ul>
+<h2 id="route">七步决策路线</h2><ol><li>写定义域；</li><li>明确目标结论；</li><li>选择原函数或辅助函数；</li><li>求导并找临界点；</li><li>必要时按参数分类；</li><li>用单调性、极值或零点回答；</li><li>检查端点、等号和临界参数。</li></ol>
+<h2 id="example"><span class="level">L4 综合</span> 典型例题</h2><p>设 \(f(x)=\ln x-ax\)。若 \(f(x)\le-1\) 对任意 \(x&gt;0\) 恒成立，求 \(a\) 的取值范围。</p><details><summary>查看思路</summary><div>固定参数后求 \(f\) 的最大值；同时先排除不能取得有限最大值的参数范围。</div></details><details open><summary>查看完整解析</summary><div>若 \(a\le0\)，当 \(x\to+\infty\) 时 \(f(x)\to+\infty\)，不合题意，故 \(a&gt;0\)。此时 \(f'(x)=\frac1x-a\)，函数在 \((0,\frac1a)\) 上递增，在 \((\frac1a,+\infty)\) 上递减，最大值为 \(f(\frac1a)=-\ln a-1\)。要求最大值不超过 \(-1\)，即 \(-\ln a-1\le-1\)，得到 \(a\ge1\)。</div></details>
+<h2 id="review">错题复盘四问</h2><ol><li>定义域是否写全？</li><li>分类依据是不是结构变化点？</li><li>存在性与唯一性是否都证明？</li><li>答案是否覆盖临界参数和等号？</li></ol>
+<div class="actions"><a class="btn" href="inequalities.html">← 不等式</a><a class="btn primary" href="../assessment/index.html">参加阶段测验 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 每一问先翻译，再计算</div></footer></body></html>

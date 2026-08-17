@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>立体几何综合证明｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a class="active" href="index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#reverse">逆向分析</a><a href="#chains">证明链</a><a href="#example">综合例题</a><a href="#writing">书写规范</a></aside><article class="article">
+<span class="eyebrow">立体几何 · 综合方法</span><h1>综合证明策略</h1><p class="intro">从结论倒推所需定理，再回到已知条件寻找中点、平行、垂直和全等关系，比盲目添加辅助线更稳定。</p>
+<h2 id="reverse">从结论逆向分析</h2><ul><li>要证线面平行：寻找平面内与目标直线平行的直线；</li><li>要证面面平行：寻找两组相交直线分别平行；</li><li>要证线面垂直：寻找平面内两条相交直线并分别证明垂直；</li><li>要证面面垂直：在一个平面内寻找垂直于另一个平面的直线。</li></ul>
+<h2 id="chains">常见条件来源</h2><p>中点常产生中位线，平行四边形产生平行线，等腰三角形的中线产生垂直，勾股定理产生直角，线面垂直属性可以批量得到线线垂直。</p><div class="callout warn"><strong>不要跳步：</strong>每次使用判定定理时，都要逐项写清它要求的条件；图中“看起来垂直”不能作为证明依据。</div>
+<h2 id="example"><span class="level">L3 提升</span> 综合例题</h2><p>在四棱锥 \(P-ABCD\) 中，底面 \(ABCD\) 为正方形，\(PA\perp\) 平面 \(ABCD\)。证明：平面 \(PAC\perp\) 平面 \(PBD\)。</p><details open><summary>查看证明</summary><div>因为底面为正方形，所以 \(AC\perp BD\)。又因为 \(PA\perp\) 平面 \(ABCD\)，且 \(BD\subset\) 平面 \(ABCD\)，所以 \(PA\perp BD\)。直线 \(AC,PA\) 相交且都在平面 \(PAC\) 内，因此 \(BD\perp\) 平面 \(PAC\)。又 \(BD\subset\) 平面 \(PBD\)，故平面 \(PAC\perp\) 平面 \(PBD\)。</div></details>
+<h2 id="writing">规范书写检查</h2><ol><li>点、线、面符号与题图一致；</li><li>说明直线属于哪个平面；</li><li>使用两条直线时说明它们相交；</li><li>最后明确引用判定定理并写出结论。</li></ol>
+<div class="actions"><a class="btn" href="parallel-perpendicular.html">← 平行与垂直</a><a class="btn primary" href="../question-bank/index.html">去题库训练 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 从结论找定理，从定理找条件</div></footer>
+</body></html>
