@@ -93,7 +93,7 @@ class SiteTests(unittest.TestCase):
 
     def test_progress_checklist_covers_all_lessons(self):
         document = parse_document(SITE / "progress/index.html")
-        self.assertEqual(len(document.progress_ids), 15)
+        self.assertEqual(len(document.progress_ids), 17)
         self.assertEqual(len(document.progress_ids), len(set(document.progress_ids)))
 
     def test_question_bank_has_keyword_filter(self):

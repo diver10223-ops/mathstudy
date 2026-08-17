@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>导数与实际优化｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body><header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a class="active" href="index.html">导数</a><a href="../solid-geometry/index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout"><aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#model">建立模型</a><a href="#domain">实际范围</a><a href="#example">典型例题</a><a href="#check">结果检验</a></aside><article class="article">
+<span class="eyebrow">导数 · 应用课</span><h1>导数与实际优化</h1><p class="intro">实际最优化题先把文字条件翻译成一个变量的函数，再用导数寻找最大利润、最小成本或最大面积。</p>
+<h2 id="model">五步建模流程</h2><ol><li>选择自变量并写明单位；</li><li>用题目约束表示其他量；</li><li>写出目标函数；</li><li>确定符合实际意义的定义域；</li><li>用导数求最值并翻译回实际结论。</li></ol>
+<h2 id="domain">实际定义域不能省</h2><p>长度、产量、人数等通常要求非负；材料尺寸还要满足裁剪后各边为正；离散数量可能要求取整数。导数给出的连续最优点若不符合取值要求，需要比较附近可行值。</p><div class="callout warn"><strong>单位检查：</strong>面积、体积、成本和利润的单位不同。最终答案必须包含题目所需的对象和单位，而不只是一个数。</div>
+<h2 id="example"><span class="level">L3 提升</span> 典型例题</h2><p>用一张边长为 12 的正方形纸片，在四角各剪去边长为 \(x\) 的小正方形，折成无盖长方体。求体积最大时的 \(x\)。</p><details><summary>查看建模</summary><div>底面边长为 \(12-2x\)，高为 \(x\)，实际范围是 \(0&lt;x&lt;6\)，所以 \(V(x)=x(12-2x)^2\)。</div></details><details open><summary>查看完整解析</summary><div>\[V'(x)=(12-2x)(12-6x).\] 在 \((0,2)\) 上导数为正，在 \((2,6)\) 上导数为负，因此 \(x=2\) 时体积最大。最大体积为 \(2\times8^2=128\)。</div></details>
+<h2 id="check">模型结果四项检查</h2><ul><li>最优点是否在实际定义域内；</li><li>端点是否可取，是否需要比较；</li><li>连续结果是否需要取整数；</li><li>答案是否说明最优方案及对应目标值。</li></ul>
+<div class="actions"><a class="btn" href="comprehensive.html">← 综合方法</a><a class="btn primary" href="../assessment/advanced.html">挑战综合测验 →</a></div>
+</article></main><footer class="footer"><div class="container">MathStudy · 先建模，再求导，最后回到实际问题</div></footer></body></html>
