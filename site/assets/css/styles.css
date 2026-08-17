@@ -30,3 +30,27 @@
 .exam-question { padding: 20px 0; border-bottom: 1px solid var(--line); }
 .exam-question:last-of-type { border-bottom: 0; }
 .exam-question p { font-size: 16px; }
+
+/* Reference tools and local progress */
+.tool-layout { padding-top: 10px; }
+.reference-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 18px 0 28px; }
+.reference-item { display: grid; gap: 5px; padding: 16px; background: #f8faff; border: 1px solid #dce5fb; border-radius: 12px; }
+.reference-item strong { color: var(--blue2); }
+.template-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.template-list section { padding: 18px; border: 1px solid var(--line); border-radius: 12px; }
+.template-list span { color: var(--blue); font-size: 12px; font-weight: 800; }
+.template-list h3 { margin: 5px 0; }
+.template-list p { margin: 0; color: var(--muted); }
+.progress-dashboard { max-width: 900px; margin: 0 auto; padding: 30px; background: white; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+.progress-summary { display: flex; align-items: center; gap: 34px; }
+.progress-summary div { display: grid; }
+.progress-summary strong { color: var(--blue); font-size: 30px; line-height: 1.2; }
+.progress-summary span { color: var(--muted); font-size: 13px; }
+.progress-summary button { margin-left: auto; }
+.study-progress { height: 10px; margin: 22px 0 30px; overflow: hidden; background: #eef0f4; border-radius: 99px; }
+.study-progress i { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--blue), var(--cyan)); transition: width .25s; }
+.checklist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.checklist h2 { font-size: 20px; }
+.checklist label { display: flex; align-items: center; gap: 10px; padding: 9px 0; color: #475467; cursor: pointer; }
+.checklist input { width: 18px; height: 18px; accent-color: var(--blue); }
+@media (max-width: 650px) { .reference-grid, .template-list, .checklist-grid { grid-template-columns: 1fr; } .progress-summary { align-items: start; flex-wrap: wrap; } .progress-summary button { margin-left: 0; } }

@@ -20,6 +20,7 @@ class DocumentParser(HTMLParser):
         self.title = ""
         self.questions = []
         self.h1_count = 0
+        self.progress_ids = []
 
     def handle_starttag(self, tag, attrs):
         values = dict(attrs)
@@ -35,6 +36,8 @@ class DocumentParser(HTMLParser):
             self.questions.append(values)
         if tag == "h1":
             self.h1_count += 1
+        if "data-progress" in values:
+            self.progress_ids.append(values["data-progress"])
 
     def handle_endtag(self, tag):
         if tag == "title":
@@ -87,6 +90,11 @@ class SiteTests(unittest.TestCase):
         forbidden = {".json", ".md"}
         unexpected = [path for path in SITE.rglob("*") if path.suffix in forbidden]
         self.assertEqual(unexpected, [])
+
+    def test_progress_checklist_covers_all_lessons(self):
+        document = parse_document(SITE / "progress/index.html")
+        self.assertEqual(len(document.progress_ids), 15)
+        self.assertEqual(len(document.progress_ids), len(set(document.progress_ids)))
 
     def test_github_pages_workflow_publishes_site_directory(self):
         workflow = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")
