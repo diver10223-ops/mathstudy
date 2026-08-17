@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>线面角与点面距离｜MathStudy</title><link rel="stylesheet" href="../assets/css/styles.css" /><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">∑</span>MathStudy</a><div class="links"><a href="../index.html">首页</a><a href="../derivative/index.html">导数</a><a class="active" href="index.html">立体几何</a><a href="../question-bank/index.html">题库</a></div></nav></header>
+<main class="container article-layout">
+  <aside class="sidebar"><p class="sidebar-title">本节目录</p><a href="#angle">线面角</a><a href="#distance">点面距离</a><a href="#example">综合例题</a><a href="#check">结果检查</a></aside>
+  <article class="article">
+    <span class="eyebrow">立体几何 · 空间度量</span><h1>线面角与点面距离</h1><p class="intro">方向向量描述直线方向，法向量描述平面方向。两者的点积同时控制线面角和点面距离。</p>
+    <h2 id="angle">线面角</h2><p>设直线方向向量为 \(\boldsymbol v\)，平面法向量为 \(\boldsymbol n\)，直线与平面所成角为 \(\theta\)，则</p><div class="formula-block">\[\sin\theta=\frac{|\boldsymbol v\cdot\boldsymbol n|}{|\boldsymbol v||\boldsymbol n|},\qquad 0\le\theta\le\frac\pi2.\]</div><div class="callout warn"><strong>为什么用正弦？</strong>方向向量与法向量的锐夹角和线面角互余。因此“方向—法向量”计算的是余弦，转换到线面角后成为正弦。</div>
+    <h2 id="distance">点到平面的距离</h2><p>平面经过点 \(A\)，法向量为 \(\boldsymbol n\)。点 \(P\) 到该平面的距离是 \(\overrightarrow{AP}\) 在法向量方向上的投影长度：</p><div class="formula-block">\[d=\frac{|\overrightarrow{AP}\cdot\boldsymbol n|}{|\boldsymbol n|}.\]</div><p>点 \(A\) 可以选择平面内任意已知点，优先选择坐标最简单的点。</p>
+    <h2 id="example"><span class="level">L3 提升</span> 综合例题</h2><p>平面 \(\alpha\) 经过原点，法向量为 \(\boldsymbol n=(1,1,1)\)。直线 \(l\) 的方向向量为 \(\boldsymbol v=(1,0,1)\)，点 \(P=(1,2,3)\)。求直线与平面所成角的正弦值，以及点 \(P\) 到平面 \(\alpha\) 的距离。</p><details open><summary>查看解析</summary><div>线面角满足 \[\sin\theta=\frac{|(1,0,1)\cdot(1,1,1)|}{\sqrt2\sqrt3}=\frac{\sqrt6}{3}.\] 取平面内原点 \(O\)，点面距离为 \[d=\frac{|\overrightarrow{OP}\cdot\boldsymbol n|}{|\boldsymbol n|}=\frac{|1+2+3|}{\sqrt3}=2\sqrt3.\]</div></details>
+    <h2 id="check">结果检查</h2><ul><li>线面角必须位于 \([0,\frac\pi2]\)；</li><li>正弦值必须位于 \([0,1]\)；</li><li>距离不能为负；</li><li>方向向量或法向量倍乘后，结果应保持不变。</li></ul>
+    <div class="actions"><a class="btn" href="dihedral-angle.html">← 二面角</a><a class="btn primary" href="../question-bank/index.html">去题库训练 →</a></div>
+  </article>
+</main><footer class="footer"><div class="container">MathStudy · 角看方向，距离看投影</div></footer>
+</body>
+</html>

@@ -19,6 +19,7 @@ class DocumentParser(HTMLParser):
         self.title_depth = 0
         self.title = ""
         self.questions = []
+        self.h1_count = 0
 
     def handle_starttag(self, tag, attrs):
         values = dict(attrs)
@@ -32,6 +33,8 @@ class DocumentParser(HTMLParser):
             self.title_depth += 1
         if tag == "article" and "question" in values.get("class", "").split():
             self.questions.append(values)
+        if tag == "h1":
+            self.h1_count += 1
 
     def handle_endtag(self, tag):
         if tag == "title":
@@ -55,6 +58,7 @@ class SiteTests(unittest.TestCase):
                 document = parse_document(path)
                 self.assertEqual(document.language, "zh-CN")
                 self.assertTrue(document.title.strip())
+                self.assertEqual(document.h1_count, 1)
 
     def test_local_links_resolve(self):
         for path in SITE.rglob("*.html"):
